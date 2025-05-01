@@ -40,7 +40,7 @@ public class Main {
         }
 
         if (guessAmount == 0) {
-            System.out.println("Sorry you loose!");
+            System.out.println("Sorry you lose!");
             System.out.println("The number to guess was: " + randomNum);
         }
 
