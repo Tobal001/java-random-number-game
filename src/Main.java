@@ -16,31 +16,33 @@ public class Main {
                 int myGuess = myObj.nextInt();
 
                 if (myGuess == randomNum) {
-                    System.out.println("You guessed the number correctly!");
+                    System.out.println("You guessed the number correctly, you win!");
                     break;
                 }
 
-                else if (myGuess > randomNum) {
+                else if (myGuess > randomNum & myGuess < 101) {
                     guessAmount -= 1;
                     System.out.println("Please pick a lower number");
                 }
 
-                else if ( myGuess > 100) {
-                    System.out.println("This number is greater then 100, Please pick a number between 0 and 100");
-                }
-
-                else {
+                else if ( myGuess < randomNum & myGuess > 0) {
                     guessAmount -= 1;
                     System.out.println("Please pick a higher number");
                 }
+
+                else {
+                    System.out.println("Your guess is not between 1 and 100, Please try again");
+                    myObj.nextLine();
+                }
             }catch(Exception e) {
-                System.out.println("This is not a number, please pick a number between 0 and 100");
+                System.out.println("Your guess is not between 1 and 100, Please try again");
                 myObj.nextLine();
                 }
         }
 
         if (guessAmount == 0) {
             System.out.println("Sorry you loose!");
+            System.out.println("The number to guess was: " + randomNum);
         }
 
     }
