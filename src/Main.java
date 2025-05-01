@@ -32,7 +32,6 @@ public class Main {
 
                 else {
                     System.out.println("Your guess is not between 1 and 100, Please try again");
-                    myObj.nextLine();
                 }
             }catch(Exception e) {
                 System.out.println("Your guess is not between 1 and 100, Please try again");
